@@ -78,11 +78,8 @@ span {
 
 /* Gallery */
 .gallery{padding: 16px}
-.grid-img {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+.gallery-img-content img{padding: 16px 0;}
+
 
 /*inspired*/
 .inspired {color: white;}
@@ -96,4 +93,102 @@ footer p {padding: 0 0 30px;}
     display: flex;
     gap: 20px;
     font-size: 20px;
+}
+
+@media (min-width: 650px) {
+    h1 {
+        font-size: 70px;
+        line-height: 65px;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .button {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.63636px;
+    }
+    
+    h2 {
+        font-size: 50px;
+        line-height: 45px;
+    }
+
+    /* Hero */
+    .hero {
+        display: flex;
+        position: relative;
+        height: 700px;
+        z-index: 1;
+        padding-bottom: 120px;
+    }
+    .hero picture {position: absolute;height: 700px;width: 430px;overflow: hidden;}
+
+    .hero picture img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-text {
+        z-index: 2;
+        width: 410px;
+        align-self: center;
+        position: absolute;
+        right: 0;
+    }
+    
+    .hero p {padding: 0px 0 40px;}
+
+    /* Gallery */
+    .gallery{padding: 38px;}
+    
+    .gallery-content {
+        display: flex;
+        gap: 68px;
+        padding-bottom: 11px;
+        justify-content: space-between;
+    }
+    
+    .gallery-content picture {order: 2;}
+    
+    .gallery-content-text {
+        order: 1;
+        max-width: 230px;
+    }
+
+    /* Grid */
+    .gallery-img-content {
+        display: grid;
+        grid-template-areas:
+            "G F"
+            "G C";
+        gap: 11px;
+    }
+    .gallery-img-content img{padding: unset}
+    .grid-img-1 {grid-area: G;}
+    .grid-img-2 {grid-area: F;}
+    
+    
+    .inspired {
+        grid-area: C;
+        background: black;
+        padding: 29px;
+    }
+    
+    .inspired h2, .inspired p {width: 220px;}
+
+    /* Footer */
+    footer {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer h3 {width: 110px;}
+    
+    footer p {width: 280px;}
 }
