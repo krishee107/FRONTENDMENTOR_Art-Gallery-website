@@ -192,3 +192,7 @@ footer p {padding: 0 0 30px;}
     
     footer p {width: 280px;}
 }
+
+@media (min-width: 1024px) {
+    
+}
