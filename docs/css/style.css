@@ -22,8 +22,6 @@ body{
     line-height: 26px;
 }
 
-img {width: 100%;height: 100%;}
-
 h1, h2{
     text-transform: uppercase;
     font-weight: 900;    
@@ -48,6 +46,7 @@ p {
 }
 /* Hero */
 .hero-text {padding: 0 16px 126px;}
+.block_black {display: none;}
 
 .button {
     font-weight: 800;
@@ -77,9 +76,9 @@ span {
 }
 
 /* Gallery */
-.gallery{padding: 16px}
+.gallery{padding: 16px;}
 .gallery-img-content img{padding: 16px 0;}
-
+.hero img, .gallery-content img, .gallery-img-content img {width: 100%;height: 100%;}
 
 /*inspired*/
 .inspired {color: white;}
@@ -151,6 +150,7 @@ footer p {padding: 0 0 30px;}
         gap: 68px;
         padding-bottom: 11px;
         justify-content: space-between;
+        padding: 38px;
     }
     
     .gallery-content picture {order: 2;}
@@ -167,6 +167,7 @@ footer p {padding: 0 0 30px;}
             "G F"
             "G C";
         gap: 11px;
+        padding: 38px;
     }
     .gallery-img-content img{padding: unset}
     .grid-img-1 {grid-area: G;}
@@ -194,5 +195,76 @@ footer p {padding: 0 0 30px;}
 }
 
 @media (min-width: 1024px) {
+    h1 {
+        font-size: 96px;
+        line-height: 88px;
+        position: absolute;
+        left: -163%;
+        max-width: 510px;
+        top: -15%;
+    }
     
+    h2 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
+    p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    /* Hero */
+    .hero{
+        height: 800px;
+        display: grid;
+        grid-template-columns: 25% 25% 50%;
+    }
+    .hero img, .hero picture img, .hero picture{all: unset;}
+
+    .hero picture img {
+        height: 100%;
+    }
+    .block_black {
+        background: var(--color2);
+        display:block;
+    }
+    .hero-text {
+        align-self: center;
+        position: absolute;
+        left: 55%;
+    }
+    /* Gallery */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        all: unset;
+    }
+        .gallery-content {
+            gap: unset;
+            padding-bottom: 30px;
+            max-width: 1110px;
+            margin: 0 auto;
+        }
+        
+        .gallery-content-text {max-width: 350px;align-self: center;}
+        .inspired {padding: 78px;/* min-height: 445px; */}
+        .inspired h2, .inspired p {width: unset;}
+        .gallery-img-content {gap: 30px;grid-template-columns: 1fr 1fr;max-width: 1110px;margin: 0 auto;padding-bottom: 50px;}
+    
+    .gallery-img-content picture {
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .gallery-img-content picture img {width: 100%;height: 100%;}
+
+    /* Footer */
+    footer {padding: 80px;}
+    footer h3 {
+        width: 160px;
+        font-size: 30px;
+    }
+
+    footer p {width: 430px;}
 }
