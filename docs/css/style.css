@@ -198,10 +198,6 @@ footer p {padding: 0 0 30px;}
     h1 {
         font-size: 96px;
         line-height: 88px;
-        position: absolute;
-        left: -163%;
-        max-width: 510px;
-        top: -15%;
     }
     
     h2 {
